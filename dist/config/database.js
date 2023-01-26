@@ -19,11 +19,13 @@ const connect = () => __awaiter(void 0, void 0, void 0, function* () {
         if (!!!_database) {
             yield client.connect();
             utils_1.Utils.LOGGER.info(`[INFO] [DATABASE] [CONNECTED-SUCCESSFULLY]`);
+            console.log(`[INFO] [DATABASE] [CONNECTED-SUCCESSFULLY]`);
             _database = client.db(utils_1.Utils.CONSTANT.DATABASE.NAME);
         }
     }
     catch (err) {
         utils_1.Utils.LOGGER.error(`[ERROR] [CONNECTION-OPEN] : [${JSON.stringify(err.message)}]`);
+        console.log(`[ERROR] [CONNECTION-OPEN] : [${JSON.stringify(err.message)}]`);
         throw new Error('Error in DB Connection');
     }
 });

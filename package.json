@@ -5,7 +5,7 @@
   "engines": {
     "node": "16.14.0"
   },
-  "main": "src/app.ts",
+  "main": "dist/app.js",
   "scripts": {
     "build" : "tsc",
     "start": "node dist/app.js",
